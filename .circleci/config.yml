@@ -1,7 +1,7 @@
 version: 2
 jobs:
   build:
-    michine:
+    machine:
       - image: ubuntu:14.04
       - python: 3.6.3
       - ruby: 2.4.0
