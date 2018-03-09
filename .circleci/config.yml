@@ -16,7 +16,8 @@ jobs:
                 name: Install Static deps
                 working_directory: ./web_app/static
                 command: |
-                    sudo apt-get update && sudo apt-get install -y nodejs
+                    sudo curl -sL https://deb.nodesource.com/setup_6.x -o nodesource_setup.sh | bash
+                    sudo apt-get update && sudo apt-get install -y nodejs build-essential
                     npm install @angular/cli
                     npm install
                     npm run-script build
