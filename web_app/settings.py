@@ -49,7 +49,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'magastructure.urls'
+ROOT_URLCONF = 'urls'
 
 TEMPLATES = [
     {
@@ -66,8 +66,6 @@ TEMPLATES = [
         },
     },
 ]
-
-WSGI_APPLICATION = 'magastructure.wsgi.application'
 
 
 # Database
