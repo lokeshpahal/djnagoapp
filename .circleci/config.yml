@@ -2,7 +2,7 @@ version: 2
 jobs:
     build:
         docker:
-            - image: circleci/python:3.6.2-stretch-browsers
+            - image: lokeshpahal/ubuntu-14.04:latest
             - image: circleci/mysql:5.7.21
         steps:
             - checkout
