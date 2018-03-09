@@ -12,3 +12,15 @@ jobs:
                     python3 -m venv venv
                     . venv/bin/activate
                     pip install -r requirements.txt
+            - run:
+                name: Db Migration
+                command: |
+                    cp web_app/local_settings_circle_ci.template web_app/local_settings.py
+                    python manage.py migrate
+            - run:
+                name: Run Django server
+                background: true
+                command: |
+                    python manage.py runserver localhost:8000
+
+
