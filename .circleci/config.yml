@@ -17,6 +17,8 @@ jobs:
                 name: Install Static deps
                 working_directory: ./web_app/static
                 command: |
+                    echo node --version
+                    echo npm --version
                     sudo npm install -g @angular/cli
                     npm install
                     npm run-script build
