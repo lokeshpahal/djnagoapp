@@ -19,7 +19,7 @@ jobs:
                 command: |
                     sudo apt-get install nodejs
                     sudo apt-get install npm
-                    npm install @angular/cli
+                    sudo npm install -g @angular/cli
                     npm install
                     npm run-script build
             - run:
