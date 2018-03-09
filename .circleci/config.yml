@@ -16,6 +16,7 @@ jobs:
                 name: Db Migration
                 working_directory: ./web_app
                 command: |
+                    . ../venv/bin/activate
                     cp local_settings_circle_ci.template local_settings.py
                     python manage.py migrate
             - run:
@@ -23,6 +24,7 @@ jobs:
                 background: true
                 working_directory: ./web_app
                 command: |
+                    . ../venv/bin/activate
                     python manage.py runserver localhost:8000
 
 
